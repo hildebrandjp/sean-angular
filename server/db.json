@@ -1,0 +1,16 @@
+{
+  "students": [
+    {
+      "name": "awegawe",
+      "email": "aweg@gmail.com.ph",
+      "contact_number": "12-0120412",
+      "id": 1
+    },
+    {
+      "name": "awegwa",
+      "email": "awegaw@gmail.com",
+      "contact_number": "123123123",
+      "id": 2
+    }
+  ]
+}
