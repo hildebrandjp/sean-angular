@@ -1,0 +1,30 @@
+<div class="d-flex justify-content-center align-items-center flex-column">
+    <button class="btn btn-primary my-4" (click)="back()">Back</button>
+    <h3>Student Information</h3>
+    <ng-container *ngIf="student.id; else notStudent" >
+        <div style="width: 400px;">
+            <div class="d-flex flex-row gap-2">
+                <label for="name">Id:</label>
+                <p class="ml-4" id="name">{{student.id}}</p>
+            </div>
+            <div class="d-flex flex-row gap-2">
+                <label for="name">Name:</label>
+                <p class="ml-4" id="name">{{student.name}}</p>
+            </div>
+            <div>
+                <label for="name">Email:</label>
+                <p class="ml-4" id="name">{{student.email}}</p>
+            </div>
+            <div>
+                <label for="name">Contact Number:</label>
+                <p class="ml-4" id="name">{{student.contact_number}}</p>
+            </div>
+        </div>
+    </ng-container>
+    <ng-template #notStudent>
+        <div>Loading...</div>
+    </ng-template>
+    
+    
+    
+</div>

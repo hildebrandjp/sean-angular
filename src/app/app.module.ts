@@ -11,15 +11,17 @@ import { AppRoutingModule } from './app.route.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { StudentViewComponent } from './student-view/student-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
     StudentCreateComponent,
     StudentTableComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    StudentViewComponent
   ],
   imports: [
     BrowserModule,

@@ -7,9 +7,9 @@
 </head>
 <body>
   <div style="width: 600px;" class="d-flex mx-auto flex-column">
-    <h1 class="text-center">Tito Sean Student Management Website</h1>
-    <app-student-create/>
-    <app-student-table />
+    <h1 class="text-center">Student Management System</h1>
+    <app-student-create (studentForm)="studentSubmitForm($event)" />
+    <app-student-table [students]="studentsFromDashboard" />
   </div>
 </body>
 </html>

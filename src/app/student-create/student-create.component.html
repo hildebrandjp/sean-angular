@@ -1,26 +1,23 @@
 <div class="mx-5">
-    <form action="">
+    <!-- <button class="btn-secondary btn my-5">{{editOrCreateMode}}</button> -->
+    <form #studentForm="ngForm" (ngSubmit)="studentSubmitForm(studentForm)" >
+        <span class="text-success text-center" *ngIf="isSuccessCreateStudent">
+          Successful create student with name: {{studentForm.value.name}}
+        </span>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Name:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1">
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Username:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1">
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Contact:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1">
+            <input [(ngModel)]="students.name" type="text" class="form-control" id="exampleFormControlInput1" name="name">
+            <!-- <input value="{{studentName}}" type="text" class="form-control" id="exampleFormControlInput1"> -->
           </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1">
+            <input [(ngModel)]="students.email" type="email" class="form-control" id="exampleFormControlInput1" name="email">
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Age:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1">
+            <label for="exampleFormControlInput1" class="form-label">Contact Number:</label>
+            <input [(ngModel)]="students.contact_number" type="text" class="form-control" id="exampleFormControlInput1" name="contactNumber">
           </div>
-
-          <button class="mt-2 btn btn-primary">Create Student</button>
+          <button type="submit" class="mt-2 btn btn-primary">{{isCreateMode ? 'Create Student' : 'Update Student'}}</button>
+          <!-- <button (click)="onPassAnotherName()" class="mt-2 btn btn-primary">Create Student</button> -->
     </form>
 </div>

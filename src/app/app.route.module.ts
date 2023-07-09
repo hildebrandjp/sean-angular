@@ -5,12 +5,14 @@ import { LoginComponent } from './authentication/login/login.component';
 import { RegisterComponent } from './authentication/register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { guardGuard } from './guard.guard';
+import { StudentViewComponent } from './student-view/student-view.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent },
-  { path: 'dashboard', component: DashboardComponent,  canActivate: [guardGuard]  },
-  { path: '', pathMatch: 'full', redirectTo: 'login' }
+  { path: 'dashboard', component: DashboardComponent,  canActivate: [guardGuard]},
+  { path: 'student/:studentId', component: StudentViewComponent},
+  { path: '', pathMatch: 'full', redirectTo: 'dashboard' }
 ];
 
 @NgModule({
