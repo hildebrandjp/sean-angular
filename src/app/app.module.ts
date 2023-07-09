@@ -12,6 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { StudentViewComponent } from './student-view/student-view.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { StudentViewComponent } from './student-view/student-view.component';
     StudentTableComponent,
     LoginComponent,
     RegisterComponent,
-    StudentViewComponent
+    StudentViewComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
